@@ -110,17 +110,17 @@
  </script>
 <script type="text/javascript">
 $(document).ready(function(){
-	$('#call-qa-nav').click(function(){
-		$('#qa-nav').stop().toggle(600,'easeOutBack', function(evt) {
+	$('#call-qa-nav, #call-qa-article').click(function(e){
 
+		e.originalEvent.preventDefault();
+		$('#qa-nav').stop().toggle(600,'easeOutBack', function() {
+			
 			if ( $(this).is( ':visible' ) ) {
+				
 				$('body').one('click', function() { $('#qa-nav').stop().toggle(600,'easeOutBack') })
 			}
 		})	
 	})	
-	$('#call-qa-article').click(function(){
-		$('#qa-article').stop().toggle(600,'easeOutBack')	
-	})			
 });
 </script>
  </head>
