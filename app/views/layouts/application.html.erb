@@ -83,8 +83,8 @@
 	    	
     	}
     
-        setInterval(function(){changeImg("changeArea1", ["images/people01.png", "images/people02.png"])},1000);
-		setInterval(function(){changeImg("changeArea2", ["images/yg-01.gif", "images/yg-02.gif", "images/yg-03.gif", "images/yg-04.gif", "images/yg-05.gif"])},1000);
+        setInterval(function(){changeImg("changeArea1", ["/images/people01.png", "/images/people02.png"])},1000);
+		setInterval(function(){changeImg("changeArea2", ["/images/yg-01.gif", "/images/yg-02.gif", "/images/yg-03.gif", "/images/yg-04.gif", "/images/yg-05.gif"])},1000);
         function changeImg(id, imgs){
 		  var imgorder = parseInt($("#"+id).attr("data-img"))+1;
 		  if(imgorder >= imgs.length){
