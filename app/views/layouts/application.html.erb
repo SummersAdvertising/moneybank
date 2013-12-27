@@ -5,7 +5,20 @@
  <!--[if lt IE 9]>
 <script src="/js/html5.js"></script>
 <![endif]-->
- <meta charset="utf-8">
+
+
+<meta charset="utf-8">
+<meta name="Robots" content="index,follow"/>
+<meta name="keywords" content="中小企業貸款, 企業融資,信用貸款,汽車貸款,信保基金,擔保品不足,遠東貸款"/>
+<title>中小企業貸款專家，遠東貸款授信團隊</title>
+<meta name="description" content="遠東貸款免費諮詢專線0800-018-555，我們3年內幫中小企業貸款近2億，成功率90%以上，全程免費服務，用專業金融知識和多方人脈幫助中小企業合法解決信用不良、擔保品不足等問題，平均7個工作天即可順利融資，快速又簡便" />
+<meta property="og:site_name" content="遠東貸款0800-018-555"/>
+<meta property="og:title" content="中小企業貸款專家，遠東貸款授信團隊"/>
+<meta property="og:description" content="遠東貸款免費諮詢專線0800-018-555，我們3年內幫中小企業貸款近2億，成功率90%以上，全程免費服務，用專業金融知識和多方人脈幫助中小企業合法解決信用不良、擔保品不足等問題，平均7個工作天即可順利融資，快速又簡便"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://www.moneybank.idv.tw"/>
+<meta property="og:image" content="http://www.moneybank.idv.tw/images/thumb.jpg">
+
  <title>遠東貸款授信團隊</title>
  <link rel="stylesheet" href="css/reset.css"/>
  <link rel="stylesheet" href="css/style.css"/>
@@ -98,7 +111,12 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	$('#call-qa-nav').click(function(){
-		$('#qa-nav').stop().toggle(600,'easeOutBack')	
+		$('#qa-nav').stop().toggle(600,'easeOutBack', function(evt) {
+
+			if ( $(this).is( ':visible' ) ) {
+				$('body').one('click', function() { $('#qa-nav').stop().toggle(600,'easeOutBack') })
+			}
+		})	
 	})	
 	$('#call-qa-article').click(function(){
 		$('#qa-article').stop().toggle(600,'easeOutBack')	
@@ -117,7 +135,7 @@ $(document).ready(function(){
         <li><a href="#k-anchor">服務流程</a></li>
         <li><a href="#" id="call-qa-nav">常見問題</a></li>
         <li><a href="#pt-anchor">融資專案</a></li>
-        <li><a href="#lt-anchor">聯絡方式</a></li>
+        <li><a href="#letter">聯絡方式</a></li>
       </ul>
        <div id="qa-nav" class="qa">
         <h3>中小企業貸款常見問題</h3>
