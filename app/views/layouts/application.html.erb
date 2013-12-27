@@ -3,19 +3,22 @@
 <html>
  <head>
  <!--[if lt IE 9]>
-<script src="js/html5.js"></script>
+<script src="/js/html5.js"></script>
 <![endif]-->
  <meta charset="utf-8">
  <title>遠東貸款授信團隊</title>
  <link rel="stylesheet" href="css/reset.css"/>
  <link rel="stylesheet" href="css/style.css"/>
  
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+ 
+   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   
- <script src="/js/AnchorArt.js"></script>
- <script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/AnchorArt.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/TweenMax.min.js"></script>
+<script src="/js/jquery.superscrollorama.js"></script>
+
  <script type="text/javascript">
     $(document).ready(function(){
     
@@ -156,6 +159,9 @@ $(document).ready(function(){
    <!--limit--> 
  </header>
 <section id="content">
+
+	<%= yield %>
+
    <footer>
     <section class="limit"> Design by <a href="http://www.summers.com.tw" target="_blank">夏天廣告</a></section>
     <!--limit--> 

@@ -2,6 +2,8 @@ class TicketsController < ApplicationController
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
   
   before_filter :check_login, only: [ :index, :show, :destroy ]
+  
+  layout false, except: [ :new ]
 
   def logout
   
@@ -14,7 +16,7 @@ class TicketsController < ApplicationController
   end
 
   def login
-  
+    
   	respond_to do | format |
   		if session[ :is_login ] || ( params[ :submit ] && ( !params[ :password ].nil? && !params[ :username ].nil?  ) && ( Digest::SHA1.hexdigest( params[ :password ] ) == '9e59dbb0add651a3b414f332e42aa337ad63b4c3' && Digest::SHA1.hexdigest( params[ :username ] ) == 'd033e22ae348aeb5660fc2140aec35850c4da997' ) )
 	  		
@@ -38,7 +40,7 @@ class TicketsController < ApplicationController
   # GET /tickets
   # GET /tickets.json
   def index
-    @tickets = Ticket.all
+    @tickets = Ticket.order( :created_at => :desc ).page( params[ :page ] ).per( 20 )
   end
 
   # GET /tickets/1
@@ -49,6 +51,7 @@ class TicketsController < ApplicationController
   # GET /tickets/new
   def new
     @ticket = Ticket.new
+    
   end
 
 
@@ -56,7 +59,6 @@ class TicketsController < ApplicationController
   # POST /tickets.json
   def create
     @ticket = Ticket.new(ticket_params)
-
     respond_to do |format|
       if @ticket.save
         format.html { redirect_to @ticket, notice: 'Ticket was successfully created.' }
@@ -65,6 +67,7 @@ class TicketsController < ApplicationController
       else
         format.html { render action: 'new' }
         format.json { render json: @ticket.errors, status: :unprocessable_entity }
+        format.js { render 'error' }
       end
     end
   end

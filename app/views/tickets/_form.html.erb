@@ -1,41 +1,71 @@
-<%= form_for(@ticket, :remote => true) do |f| %>
-  <% if @ticket.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
 
-      <ul>
-      <% @ticket.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+
+<section class="limit"> 
+<img src="/images/lt-10.png" id="lt-10" class="lt-item">
+<img src="/images/lt-11.png" id="lt-11" class="lt-item">
+<div id="form">
+
+  <%= form_for(@ticket, :remote => true) do |f| %>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="50%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr></tr>
+          <tr>
+            <td width="43%" align="center"><img src="/images/lt-12.jpg">
+              <p>遠東貸款授信團隊   免付費電話</p>
+              <a href="tel:0800-018-555">0800-018-555</a></td>
+            <td width="57%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="14%"><%= f.label :name, '姓名' %></td>
+                  <td width="86%"><%= f.text_field :name, :class => 'text' %></td>
+                </tr>
+                <tr>
+                  <td>稱謂：</td>
+                  <td>
+                  	<label><input name="ticket[gender]" type="checkbox" value="先生" class="checkbox">
+                    先生</label>
+                    <label>
+                    <input name="ticket[gender]" type="checkbox" value="女士" class="checkbox">
+                    女士</label>
+                    </td>
+                </tr>
+                <tr>
+                  <td><%= f.label :phone, '電話' %></td>
+                  <td><%= f.text_field :phone, :class => 'text' %></td>
+                </tr>
+                <tr>
+                  <td><%= f.label :email, 'Email' %>：</td>
+                  <td><%= f.text_field :email, :class => 'text' %></td>
+                </tr>
+                <tr>
+                  <td colspan="2">希望貸款額度：<br>
+                  	<label>
+	                    <input name="ticket[quota]" type="radio" value="10萬~100萬" class="checkbox">
+	                    10萬~100萬
+                  	</label>
+                  	<label>
+	                    <input name="ticket[quota]" type="radio" value="100萬~300萬" class="checkbox">
+	                    100萬~300萬
+                  	</label>
+                  	<label>
+	                    <input name="ticket[quota]" type="radio" value="300萬以上" class="checkbox">
+	                    300萬以上 
+                  	</label>
+                    </td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="right"><br>
+                    <input name="" type="submit" class="button" value=""></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
   <% end %>
+</div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :quota %><br>
-    <%= f.text_field :quota %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<!--a href="tel:0800-018-555" class="track"><img src="/images/lt-01.png" id="lt-01" class="lt"></a> <img src="/images/lt-02.png" id="lt-02" class="lt"> <img src="/images/lt-03.png" id="lt-03" class="lt"> <img src="/images/lt-04.png" id="lt-04" class="lt"> <img src="/images/lt-05.png" id="lt-05" class="lt"> 
+<img src="/images/lt-06.png" id="lt-06" class="lt"--> </section>
+
+

@@ -1,8 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<!--[if lt IE 9]>
+<script src="/js/html5.js"></script>
+<link rel="stylesheet" href="/css/desktop.css">
+<![endif]-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="Robots" content="index,follow"/>
+<meta http-equiv="content-language" content="zh-TW" />
+<title>夏天廣告後台管理系統</title>
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/default.css">
+<link rel="stylesheet" media="screen and (max-width: 543px)" href="/css/mobile.css" />
+<link rel="stylesheet" media="screen and (min-width: 544px) and (max-width: 896px)" href="/css/tablet.css" />
+<link rel="stylesheet" media="screen and (min-width: 897px)" href="/css/desktop.css" />
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/alertify.css" />
+<link rel="stylesheet" href="/css/alertify.default.css"/>
+
+
+   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  
+
+<script type="text/javascript" src="/js/auto-full-height.min.js"></script>
+<script type="text/javascript" src="/js/alertify.min.js"></script>
+<script type="text/javascript" src="/js/mobile-aside.js"></script>
+<script>
+  $(function() {
+    $( ".preview" ).sortable({
+      placeholder: "highlight"
+    });
+    $( ".preview" ).disableSelection();	
+	
+	$(".button").click(function() {
+		Alertify.log.success("已成功新增文章段落！")
+	});
+	
+	$(".delete a").click(function() {
+		Alertify.dialog.confirm("確定要刪除嗎？", function () {
+    	// user clicked "ok"
+		}, function () {
+    	// user clicked "cancel"
+		});
+	});
+	
+  });
+</script>
+</head>
+
+<body>
+<header _height="none">
+  <section id="top"> <a id="nav-ctrl"><img src="/images/nav.png"></a>
+    <div class="left">
+      <h1><a href="#">夏天廣告後台管理系統</a></h1>
+    </div>
+    <!--left-->
+    <aside> <a id="aside-ctrl"><img src="/images/set.png"></a>
+      <div id="aside-box"> <a href="#">登出</a> <a href="http://www.summers.com.tw/">返回首頁</a> </div>
+    </aside>
+  </section>
+  <!--top--> 
+</header>
+
+<section id="main" _height="auto" class="login-main">
+  <section id="vert">
 <%= form_tag( :controller => :tickets, :action => :login) do %>
 
-	<label>帳號<input name="username" type="text" /></label><br>
-	<label>密碼<input name="password" type="text" /></label>
-	
-	<input  name="submit" type="submit" />
-	
+    <section class="login">
+      <ul>
+        <li>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="center">帳號</th>
+              <td><input name="username" type="text" /></td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="center">密碼</th>
+              <td><input name="password" type="password" /></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+      <input name="submit" type="submit" style="display:none" id="submitLogin" />
+
+      <section class="entrance button"> <a href="javascript: $('#submitLogin').click(); ">登入</a> </section>
+      <!--button--> 
 <% end %>
+    </section>
+  </section>
+  <!--vert--> 
+</section>
+<!--main-->
+
+<footer _height="none"> Copyright © <a href="http://www.summers.com.tw/" target="_blank">Summers</a> </footer>
+</body>
+</html>
+
+

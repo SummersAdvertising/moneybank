@@ -7,7 +7,12 @@ Moneybank::Application.routes.draw do
   match 'tickets/login'			=> 'tickets#login', :via => [:get, :post]
 
 
-  resources :tickets
+  resources :tickets do 
+  	collection do
+  		get :login
+  		get :logout
+  	end
+  end
   
   root :to => 'tickets#new'
   
