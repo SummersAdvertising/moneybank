@@ -1,0 +1,167 @@
+
+<!doctype html>
+<html>
+ <head>
+ <!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+ <meta charset="utf-8">
+ <title>遠東貸款授信團隊</title>
+ <link rel="stylesheet" href="css/reset.css"/>
+ <link rel="stylesheet" href="css/style.css"/>
+ 
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  
+ <script src="/js/AnchorArt.js"></script>
+ <script src="/js/jquery.easing.1.3.js"></script>
+ <script type="text/javascript">
+    $(document).ready(function(){
+    
+    	// change wipes' z-index
+    	$('article.wipe').each(function() { 
+    		$(this).css('z-index', $(this).index()*10);
+    	})
+    	
+    	var articleElements = $(".rolling-fix");
+    	var originOffsetYs = [];
+    	
+    	for( var i in articleElements ) {
+    		if ( i >= articleElements.length -1 ) {
+	    		break;
+    		}
+    		originOffsetYs[i] = $(articleElements[i]).offset().top;
+    	}
+    	
+    	
+    	reduce = $('header').height();
+    	
+    	window.onscroll = function() {	    	
+    		
+    		var offsetY, wHeight, reduce, element, next, nTop, top, height, cTop, sPosition;
+    	
+    		var wHeight =  $(window).height();
+    		var wBottom = window.pageYOffset + wHeight;
+    		
+    		sPosition = window.pageYOffset;
+    		
+	    	for( var i in articleElements ) {
+	    		
+	    		var index = parseInt(i)+1;
+	    		
+	    		if ( i >= articleElements.length -1 ) {
+		    		break;
+	    		}
+	    	
+		    	element = $(articleElements[i]);
+		    	next = $(articleElements[index]);
+	    		top = originOffsetYs[i];
+	    		height = element.height();		    	
+	    		nTop = next.length ? next.offset().top : sPosition + wHeight;	    		
+	    		cTop = element.offset().top;
+	    		
+	    		
+				
+	    		if ( sPosition> top + height ) {		    	
+		    		offsetY = top + parseInt(next.height() );		    			
+	    		}  else if ( nTop < wBottom ) {	
+					offsetY =  top + wBottom - nTop;
+	    		} else if ( nTop > wBottom && sPosition > top ) {
+	    			offsetY = top;	
+	    		} else if (sPosition < top) {
+	    			offsetY = top;
+//	    			var shift = window.pageYOffset > (top + height + next.height()) ? window.pageYOffset : ;
+	    		}
+		    	
+		    	element.offset({top: offsetY});
+		    	
+	    	}    	
+	    	
+    	}
+    
+        setInterval(function(){changeImg("changeArea1", ["images/people01.png", "images/people02.png"])},1000);
+		setInterval(function(){changeImg("changeArea2", ["images/yg-01.gif", "images/yg-02.gif", "images/yg-03.gif", "images/yg-04.gif", "images/yg-05.gif"])},1000);
+        function changeImg(id, imgs){
+		  var imgorder = parseInt($("#"+id).attr("data-img"))+1;
+		  if(imgorder >= imgs.length){
+			  imgorder = 0;
+			  }
+			  
+          $("#"+id).attr("src", imgs[imgorder]).attr("data-img", imgorder);
+        }
+      });
+ </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#call-qa-nav').click(function(){
+		$('#qa-nav').stop().toggle(600,'easeOutBack')	
+	})	
+	$('#call-qa-article').click(function(){
+		$('#qa-article').stop().toggle(600,'easeOutBack')	
+	})			
+});
+</script>
+ </head>
+
+ <body>
+<header>
+   <section class="limit">
+    <h1><a href="#dr-anchor">遠東貸款授信團隊</a></h1>
+    <nav>
+       <ul>
+        <li><a href="#lsb-anchor">團隊簡介</a></li>
+        <li><a href="#k-anchor">服務流程</a></li>
+        <li><a href="#" id="call-qa-nav">常見問題</a></li>
+        <li><a href="#pt-anchor">融資專案</a></li>
+        <li><a href="#lt-anchor">聯絡方式</a></li>
+      </ul>
+       <div id="qa-nav" class="qa">
+        <h3>中小企業貸款常見問題</h3>
+        <div class="text">
+           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr class="qq">
+               <th align="left" valign="top">Q：</th>
+               <td align="left" valign="top">什麼是信保基金？</td>
+             </tr>
+            <tr class="aa">
+               <th align="left" valign="top">A：</th>
+               <td align="left" valign="top">信保基金（中小企業信用保證基金）是政府出資80%以上的公益財團法人，專為擔保品不 
+                足的中小企業提供信用保證，使其順利融資。<br><br></td>
+             </tr>
+            <tr class="qq">
+               <th align="left" valign="top">Q：</th>
+               <td align="left" valign="top">貸款最容易卡在哪一關？</td>
+             </tr>
+            <tr class="aa">
+               <th align="left" valign="top">A：</th>
+               <td align="left" valign="top">擔保品不足、找不到保人，是中小企業貸款最常見的問題，遠東貸款授信團隊經由專業評
+                估，能透過信保基金或合法融資公司（例如和潤企業）來協助您順利貸款。<br><br></td>
+             </tr>
+            <tr class="qq">
+               <th align="left" valign="top">Q：</th>
+               <td align="left" valign="top">聯徵（金融聯合信用徵信）次數過多，會影響企業貸款的核准率嗎？</td>
+             </tr>
+            <tr class="aa">
+               <th align="left" valign="top">A：</th>
+               <td align="left" valign="top">一般來說，新業務查詢超過4次，過件率就會降到50%，但還要看銀行查詢項目及企業屬性
+                與優缺點，通常企業主不可能花時間一一研究各家銀行的規定，所以交由貸款授信專業人
+                士來篩選與配對，是避免聯徵多查、影響核准率最快速簡便的途徑 。</td>
+             </tr>
+          </table>
+         </div>
+      </div><!--qa-->
+     </nav>
+  </section>
+   <!--limit--> 
+ </header>
+<section id="content">
+   <footer>
+    <section class="limit"> Design by <a href="http://www.summers.com.tw" target="_blank">夏天廣告</a></section>
+    <!--limit--> 
+  </footer>
+ </section>
+<!--content-->
+
+</body>
+</html>

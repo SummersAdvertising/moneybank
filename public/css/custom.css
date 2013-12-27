@@ -1,0 +1,41 @@
+/*---全域背景---*/
+html,.login-main{background:#93DBC3!important}
+
+/*---上方列---*/
+header{background:url(../images/01.jpg);border-bottom:1px solid #111}
+
+/*---標題---*/
+h1 a{text-shadow:0 1px 0 #000}
+
+/*---內容邊框---*/
+article{border:1px solid #59B194}
+
+/*---頁尾---*/
+footer{text-shadow:0 1px 0 #C5F4E4}
+footer a{text-shadow:0 1px 0 #C5F4E4}
+
+/*---內容---*/
+#nav-1{background-image:url(../images/nav-04.png)}
+nav .active #nav-1{background-image:url(../images/nav-04a.png)}
+
+/*-----------------------------------------------------------------------內容---*/
+
+@media screen and (max-width: 543px){
+#nav-ctrl,aside{background:#333;border:1px solid #000}
+#nav-ctrl:hover,aside:hover{background:#000}
+#nav-ctrl:active,aside:active{background:#000}
+}
+
+@media screen and (min-width: 544px) and (max-width: 896px){
+nav .active a{border:1px solid #59B194}
+#aside-box a{background:#333;border:1px solid #000}
+#aside-box a:hover{background:#000}
+nav li a{border:1px solid #59B194}
+}
+
+@media screen and (min-width: 897px){
+nav .active a{border:1px solid #59B194}
+#aside-box a{background:#333;border:1px solid #000}
+#aside-box a:hover{background:#000}
+nav li a{border:1px solid #59B194}
+}
