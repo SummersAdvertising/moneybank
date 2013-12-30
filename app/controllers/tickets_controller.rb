@@ -56,7 +56,7 @@ class TicketsController < ApplicationController
     	if params[ :mobile ].nil?
     		format.html {}
     	else
-    		format.html { render :template => 'tickets/mobile' }    	
+    		format.html { render :template => 'tickets/mobile', layout: false }    	
     	end
     end
     
