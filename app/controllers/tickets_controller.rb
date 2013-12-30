@@ -52,6 +52,14 @@ class TicketsController < ApplicationController
   def new
     @ticket = Ticket.new
     
+    respond_to do | format |
+    	if params[ :mobile ].nil?
+    		format.html {}
+    	else
+    		format.html { render :template => 'tickets/mobile' }    	
+    	end
+    end
+    
   end
 
 
@@ -61,6 +69,9 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new(ticket_params)
     respond_to do |format|
       if @ticket.save
+      
+      	TicketsMailer.new_ticket(@ticket).deliver
+      
         format.html { redirect_to @ticket, notice: 'Ticket was successfully created.' }
         format.json { render action: 'show', status: :created, location: @ticket }
         format.js {  }

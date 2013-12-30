@@ -1,61 +1,60 @@
-/*-----------------------------------------------------------------------頁首---*/
 
-#top a{display:block}
+html{height:100%}
+body{height:100%}
+#aside{width:150px;position:fixed;height:100%;background:url(../images/aside.jpg);z-index:1;padding:30px 0 0 0}
+#aside li{text-align:center;padding:10px 0}
+#aside a{color:#fff;font-size:18px}
+#wrapper{font:300 23px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;position:relative;z-index:5}
+a{font:300 23px 微軟正黑體,Microsoft JhengHei;text-decoration:none;-webkit-transition:all ease .3s;-moz-transition:all ease .3s}
 
-#nav-ctrl,h1,aside{float:left}
-#nav-ctrl,aside{width:15%;border:1px solid #2B4680;border-radius:5px;background:#4B67A1;text-align:center;padding:4px 0 0 0;height:30px}
-#nav-ctrl:hover,aside:hover{background:#3B5998}
-#nav-ctrl:active,aside:active{background:#2B4680}
+#top{background:url(../images/mb-03.jpg) 0 0 repeat-x;height:73px;width:100%;padding:20px;position:relative}
+#top h1{background:url(../images/mb-02.jpg) 0 0 no-repeat;width:270px;height:32px;margin:0 auto;text-indent:-9999px}
+#ctrl{position:absolute;top:25px;left:25px}
 
-#top .left h1{width:70%;text-align:center}
+#banner{background:url(../images/mb-04.jpg) center center no-repeat;background-size:cover;min-height:415px;text-align:center}
+#banner h2{color:#fff;font:900 23px 微軟正黑體,Microsoft JhengHei;text-align:center;padding:40px 0}
+#banner h2 b{font-size:42px}
 
-#aside-box{position:absolute;display:none;width:150px;right:10px;top:40px;z-index:3;background:url(../images/aside.png) 113px 0 no-repeat;padding:15px 0 0 0}
-#aside-box a{font-size:13px;border-top:1px solid #3E4555;border-bottom:1px solid #232A3A;color:#C3CBD8;padding:12px 0 0 0;height:40px;background:#32394B;}
-#aside-box a:hover{background:#292F3D}
+#article{background:#92DBC3;padding:15px}
+.content{border-radius:5px;margin:0 0 15px 0}
+#content-1{background:#4FC1E9;text-align:center}
+#content-1 h3{font:300 32px 微軟正黑體,Microsoft JhengHei;height:80px;padding:20px 0 0 0}
+#content-1 table{background:#F7F8FA}
+#content-1 table td{height:180px}
+#content-1 p{padding:35px 0}
+#content-1 a{color:#fff;font:900 32px 微軟正黑體,Microsoft JhengHei;line-height:1.7em}
 
-#aside-box a:first-child{border-radius:5px 5px 0 0}
-#aside-box a:last-child{border-radius:0 0 5px 5px}
+#content-2{border-bottom:3px solid #E3E4E8;background:#fff}
+#content-2 table{}
+#content-2 td{padding:15px 0}
+#content-2 p b{font:300 27px 微軟正黑體,Microsoft JhengHei}
+#content-2 ul{width:200px;margin:0 auto}
+#content-2 li{font-size:20px;padding:0 0 0 30px;background:url(../images/mb-08.jpg) 0 center no-repeat}
 
-/*-----------------------------------------------------------------------內容---*/
+#content-3{border-bottom:3px solid #E3E4E8;background:#FFFDF3;text-align:center;padding:25px 0}
+#content-3 p{color:#5f6369}
+#content-3 h3{color:#bd0008;height:55px;font:900 23px 微軟正黑體,Microsoft JhengHei}
 
-#main{background:#32394A}
+#content-4{background:#fff}
+#content-4 h3{font:300 32px 微軟正黑體,Microsoft JhengHei;padding:10px 0;background:#4FC1E9;text-align:center}
+#content-4 h4{background:url(../images/mb-10.jpg) 15px center no-repeat #F6F8FA;color:#085e7c;font:300 23px 微軟正黑體,Microsoft JhengHei;padding:10px 0 10px 45px;border-top:1px solid #CFEEE4}
+#content-4 ul{width:320px;margin:20px auto}
+#content-4 li{border-bottom:1px solid #EAEDF1}
 
-article{padding:10px;box-shadow:0 0 10px #000}
-article section{margin:0 0 10px 0}
+#content-5{background:#FFFFFF;text-align:center;padding:5%}
+#content-5 h3{height:55px;font:900 23px 微軟正黑體,Microsoft JhengHei;color:#177596}
+#content-5 h4{text-align:left;font:300 23px 微軟正黑體,Microsoft JhengHei;}
+#content-5 p{text-align:left;color:#5a5a5a;font-size:18px;line-height:1.7em}
+#call p{border:1px solid #B2E1F2;text-align:center!important;padding:15px 0}
+#call a{color:#1260f0;font-size:40px}
 
-/*-----------------------------------------------------------------------側欄---*/
+#form{border-top:8px solid #1F6E89;background:#92DBC3;padding:5%;margin:5%}
 
-nav{position:absolute;top:50px;z-index:1;border-bottom:1px solid #3E4555}
-nav ul{width:150px;background:#32394A}
-nav li{height:75px}
-nav li a{background-position:20px center;color:#777;text-shadow:0 1px 0 #fff;border-top:1px solid #3E4555;border-bottom:1px solid #242A37;padding:30px 0 0 60px;color:#B9C0CE;text-shadow:0 1px 0 #1E232E}
-nav .active a,
-nav a:hover{background-color:#292F3D}
+#form .text{width:100%;border:none;position:relative;height:55px;padding:10px;font:300 18px 微軟正黑體,Microsoft JhengHei;color:#1F6E89}
+#form td{height:55px}
+#form h3{color:#0b4154;font:300 23px 微軟正黑體,Microsoft JhengHei;text-align:center}
+#form p{text-align:center;font-size:18px}
+#form h4{font:300 18px 微軟正黑體,Microsoft JhengHei;height:30px}
 
-/*-----------------------------------------------------------------------標題---*/
-
-.title .counter{display:none}
-
-/*-----------------------------------------------------------------------列表---*/
-
-.list .x1{width:15%}
-.list .x0{display:none}
-
-/*-----------------------------------------------------------------------欄位---*/
-
-.text .quarter{width:100%}
-.text .three{width:100%}
-.text .half{width:100%}
-
-/*-----------------------------------------------------------------------發文---*/
-
-.post{border-radius:0 0 5px 5px}
-
-/*-----------------------------------------------------------------------頁腳---*/
-
-footer{text-align:center;padding:10px 0}
-
-/*-----------------------------------------------------------------------登入---*/
-
-.login{width:300px}
-.login li{margin:0 0 10px 0;padding:5px 5px}
+#form .button{display:block;color:#fff;background:#4FC1E9;text-align:center;border-radius:5px;border:none;border-bottom:3px solid #3BAFDA;width:150px;height:50px;margin:50px auto 0 auto;font:300 23px 微軟正黑體,Microsoft JhengHei;cursor:pointer}
+#form .button:active{position:relative;top:2px;border-bottom:1px solid #3BAFDA}

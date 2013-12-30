@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>[遠東信貸官網] 收到使用者詢問囉！</title>
+	</head>
+	<body>	
+		<table width="100%" border="1" bordercolor="eeeeee" cellspacing="5" cellpadding="0">
+		  <tr>
+		    <th width="9%" height="30" >客戶姓名</th>
+		    <td width="24%" bgcolor="#f3f3f3" style="padding:0 0 0 10px"><%= @ticket.name %></td>
+		    <th width="9%">連絡電話</th>
+		    <td width="24%" bgcolor="#f3f3f3" style="padding:0 0 0 10px"><%= @ticket.phone %></td>
+		    <th width="9%">電子郵件</th>
+		    <td width="25%" bgcolor="#f3f3f3" style="padding:0 0 0 10px"><%= @ticket.email %></td>
+		  </tr>
+		  <tr>
+		    <th height="30">需求額度</th>
+		    <td colspan="5" bgcolor="#f3f3f3" style="padding:0 0 0 10px">
+		    <%= @ticket.quota %></td>
+		  </tr>
+		</table>
+	
+	</body>
+</html>
