@@ -86,12 +86,12 @@ Moneybank::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :domain               => 'localhost',
-    :user_name            => 'adword@summers.com.tw',
-    :password             => '7123QW9780',
-    :authentication       => 'plain',
+    :address              => "smtp.live.com",
+    :port                 	=> 25,
+  #  :domain               => 'www.moneybank.idv.tw',
+    :user_name            => 'bank0806@hotmail.com',
+    :password             => 'jany680402',
+    :authentication       => 'login',
     :enable_starttls_auto => true
   }
 

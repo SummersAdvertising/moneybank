@@ -1,20 +1,20 @@
 
-html{height:100%;background:url(../images/aside.jpg)}
+html{height:100%;background:url(/images/aside.jpg)}
 body{height:100%}
-#aside{width:38%;position:fixed;height:100%;background:url(../images/aside.jpg);z-index:1}
+#aside{width:38%;position:fixed;height:100%;background:url(/images/aside.jpg);z-index:1}
 #aside li{text-align:center;padding:20px 0;border-bottom:1px dashed #555}
 #aside a{color:#fff;font-size:28px}
 #wrapper{font:300 23px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;position:relative;z-index:5;top:73px}
 a{font:300 23px 微軟正黑體,Microsoft JhengHei;text-decoration:none;-webkit-transition:all ease .3s;-moz-transition:all ease .3s}
 
-#top{background:url(../images/mb-03.jpg) 0 0 repeat-x;height:73px;width:100%;padding:20px;position:fixed;top:0;left:0;z-index:9}
-#top h1{background:url(../images/mb-02.jpg) 0 0 no-repeat;width:270px;height:32px;margin:0 auto;text-indent:-9999px}
+#top{background:url(/images/mb-03.jpg) 0 0 repeat-x;height:73px;width:100%;padding:20px;position:fixed;top:0;left:0;z-index:9}
+#top h1{background:url(/images/mb-02.jpg) 0 0 no-repeat;width:270px;height:32px;margin:0 auto;text-indent:-9999px}
 #ctrl{
 margin-right: 10px;
 float: left;
 margin-top: 4px;}
 
-#banner{background:url(../images/mb-04.jpg) center center no-repeat;background-size:cover;min-height:415px;text-align:center}
+#banner{background:url(/images/mb-04.jpg) center center no-repeat;background-size:cover;min-height:415px;text-align:center}
 #banner h2{color:#fff;font:900 21px 微軟正黑體,Microsoft JhengHei;text-align:center;padding:40px 0}
 #banner h2 b{font-size:40px}
 
@@ -32,7 +32,7 @@ margin-top: 4px;}
 #content-2 td{padding:15px 0;}
 #content-2 p b{font:300 23px 微軟正黑體,Microsoft JhengHei}
 #content-2 ul{width:200px;margin:0 auto}
-#content-2 li{font-size:16px;padding:0 0 0 30px;background:url(../images/mb-08.jpg) 0 center no-repeat}
+#content-2 li{font-size:16px;padding:0 0 0 30px;background:url(/images/mb-08.jpg) 0 center no-repeat}
 
 #content-3{border-bottom:3px solid #E3E4E8;background:#FFFDF3;text-align:center;padding:25px 0}
 #content-3 p{color:#5f6369}
@@ -40,7 +40,7 @@ margin-top: 4px;}
 
 #content-4{background:#fff}
 #content-4 h3{font:300 32px 微軟正黑體,Microsoft JhengHei;padding:10px 0;background:#4FC1E9;text-align:center}
-#content-4 h4{background:url(../images/mb-10.jpg) 15px center no-repeat #F6F8FA;color:#085e7c;font:300 23px 微軟正黑體,Microsoft JhengHei;padding:10px 0 10px 45px;border-top:1px solid #CFEEE4}
+#content-4 h4{background:url(/images/mb-10.jpg) 15px center no-repeat #F6F8FA;color:#085e7c;font:300 23px 微軟正黑體,Microsoft JhengHei;padding:10px 0 10px 45px;border-top:1px solid #CFEEE4}
 #content-4 ul{width:320px;margin:20px auto}
 #content-4 li{border-bottom:1px solid #EAEDF1; width: 83%; padding-left: 15px;}
 
