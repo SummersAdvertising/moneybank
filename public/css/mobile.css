@@ -8,7 +8,7 @@ body{height:100%}
 a{font:300 23px 微軟正黑體,Microsoft JhengHei;text-decoration:none;-webkit-transition:all ease .3s;-moz-transition:all ease .3s}
 
 #top{background:url(../images/mb-03.jpg) 0 0 repeat-x;height:73px;width:100%;padding:20px;position:fixed;top:0;left:0;z-index:9}
-#top h1{ float:left; background:url(../images/mb-02.jpg) 0 0 no-repeat;width:270px;height:32px;margin:0 auto;text-indent:-9999px}
+#top h1{background:url(../images/mb-02.jpg) 0 0 no-repeat;width:270px;height:32px;margin:0 auto;text-indent:-9999px}
 #ctrl{
 margin-right: 10px;
 float: left;
@@ -16,7 +16,7 @@ margin-top: 4px;}
 
 #banner{background:url(../images/mb-04.jpg) center center no-repeat;background-size:cover;min-height:415px;text-align:center}
 #banner h2{color:#fff;font:900 21px 微軟正黑體,Microsoft JhengHei;text-align:center;padding:40px 0}
-#banner h2 b{font-size:42px}
+#banner h2 b{font-size:40px}
 
 #article{background:#92DBC3;padding:15px}
 .content{border-radius:5px;margin:0 0 15px 0}
