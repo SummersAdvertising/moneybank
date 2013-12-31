@@ -8,8 +8,11 @@ body{height:100%}
 a{font:300 23px 微軟正黑體,Microsoft JhengHei;text-decoration:none;-webkit-transition:all ease .3s;-moz-transition:all ease .3s}
 
 #top{background:url(../images/mb-03.jpg) 0 0 repeat-x;height:73px;width:100%;padding:20px;position:fixed;top:0;left:0;z-index:9}
-#top h1{background:url(../images/mb-02.jpg) 0 0 no-repeat;width:270px;height:32px;margin:0 auto;text-indent:-9999px}
-#ctrl{position:absolute;top:25px;left:25px}
+#top h1{ float:left; background:url(../images/mb-02.jpg) 0 0 no-repeat;width:270px;height:32px;margin:0 auto;text-indent:-9999px}
+#ctrl{
+margin-right: 10px;
+float: left;
+margin-top: 4px;}
 
 #banner{background:url(../images/mb-04.jpg) center center no-repeat;background-size:cover;min-height:415px;text-align:center}
 #banner h2{color:#fff;font:900 23px 微軟正黑體,Microsoft JhengHei;text-align:center;padding:40px 0}
@@ -29,7 +32,7 @@ a{font:300 23px 微軟正黑體,Microsoft JhengHei;text-decoration:none;-webkit-
 #content-2 td{padding:15px 0}
 #content-2 p b{font:300 27px 微軟正黑體,Microsoft JhengHei}
 #content-2 ul{width:200px;margin:0 auto}
-#content-2 li{font-size:20px;padding:0 0 0 30px;background:url(../images/mb-08.jpg) 0 center no-repeat}
+#content-2 li{font-size:19px;padding:0 0 0 30px;background:url(../images/mb-08.jpg) 0 center no-repeat}
 
 #content-3{border-bottom:3px solid #E3E4E8;background:#FFFDF3;text-align:center;padding:25px 0}
 #content-3 p{color:#5f6369}
