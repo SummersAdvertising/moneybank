@@ -1,2 +1,6 @@
 
 alert("<%= @ticket.errors.messages.values.flatten.join('\n').html_safe %>");
+
+$('body').css('cursor', 'auto');
+
+$('#ticketSubmit').show();
