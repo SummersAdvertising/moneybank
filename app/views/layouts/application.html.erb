@@ -16,15 +16,13 @@
 <meta property="og:title" content="中小企業貸款專家，遠東貸款授信團隊"/>
 <meta property="og:description" content="遠東貸款免費諮詢專線0800-018-555，我們3年內幫中小企業貸款近2億，成功率90%以上，全程免費服務，用專業金融知識和多方人脈幫助中小企業合法解決信用不良、擔保品不足等問題，平均7個工作天即可順利融資，快速又簡便"/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="http://www.moneybank.idv.tw"/>
-<meta property="og:image" content="http://www.moneybank.idv.tw/images/thumb.jpg">
+<meta property="og:url" content="http://www.iwantmoney.com.tw"/>
+<meta property="og:image" content="http://www.iwantmoney.com.tw/images/thumb.jpg">
 
- <title>遠東貸款授信團隊</title>
- <link rel="stylesheet" href="css/reset.css"/>
- 
- 
-   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+<link rel="stylesheet" href="/css/reset.css"/>
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= csrf_meta_tags %>
   
 <script src="/js/AnchorArt.js"></script>
 <script src="/js/jquery.easing.1.3.js"></script>
@@ -122,6 +120,18 @@ $(document).ready(function(){
 	})	
 });
 </script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44702357-1', 'www.iwantmoney.com.tw');
+  ga('send', 'pageview');
+
+</script>
+
  </head>
 
  <body>
@@ -185,6 +195,13 @@ $(document).ready(function(){
   </footer>
  </section>
 <!--content-->
+
+<script type="text/javascript">
+$("form").submit(funciton(){
+  $.ajax({method: 'GET', url: '/ga.html'});
+  return true;
+});
+</script>
 
 </body>
 </html>
